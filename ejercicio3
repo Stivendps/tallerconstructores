@@ -1,0 +1,18 @@
+// ejer 3  notas calculadas
+
+function Estudiante(nombre,materia,nota1,nota2,nota3,aprobado){
+    this.nombre = nombre;
+    this.materia = materia;
+    this.nota1 = nota1;
+    this.nota2 = nota2;
+    this.nota3 = nota3;
+    this.mostrarResultado = ((this.nota1 + this.nota2 + this.nota3) / 3 >= 3);
+
+    console.log(`Estudiante ${nombre}: ${materia} notas: ${nota1} | ${nota2} | ${nota3} | aprobo :${this.mostrarResultado}`);
+}
+
+const estu1 = new Estudiante("rhonald","matematicas",5,3,4);
+const estu2 = new Estudiante("stevend","desarrollo",5,5,5);
+const estu3 = new Estudiante("dayana","derecho",0,0,0);
+const estu4 = new Estudiante("miguel","contabilidad",1,2,3);
+

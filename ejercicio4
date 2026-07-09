@@ -1,0 +1,18 @@
+// biblioteca libro eje 4
+
+function Libro(nombre,materia,ciudad,tamano,color,prestado){
+    this.nombre = nombre;
+    this.materia = materia;
+    this.ciudad = ciudad;
+    this.tamano = tamano;
+    this.color = color;
+    this.prestado = false;
+    this.mostrarResultado = ((this.ciudad + this.tamano + this.color) / 3 >= 3);
+
+    console.log(`Estudiante ${nombre}: ${materia} notas: ${ciudad} | ${tamano} | ${color} | aprobo :${this.mostrarResultado}`);
+}
+
+const libro1= new Libro("rhonald","matematicas",5,3,4);
+const libro2 = new Libro("stevend","desarrollo",5,5,5);
+const libro3 = new Libro("dayana","derecho",0,0,0);
+const libro4 = new Libro("miguel","contabilidad",1,2,3);

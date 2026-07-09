@@ -1,0 +1,16 @@
+// moldeaado de inventario tienda tecnologia
+console.log(`
+Lista de computadores:
+    `);
+function Computador(marca,procesador,ram,precio){
+        this.marca = marca;
+        this.procesador = procesador;
+        this.ram = ram;
+        this.precio = precio;
+
+        console.log(`1) ${marca},${procesador},${ram},${precio.toLocaleString()}`);
+}
+ 
+const pc1 = new Computador("asus","intel",16,10000000);
+const pc2 = new Computador("dell","intel",32,7500000);
+const pc3 = new Computador("hp","amd",12,4300000);

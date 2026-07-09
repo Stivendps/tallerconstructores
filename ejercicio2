@@ -1,0 +1,21 @@
+// Encapsulamiento de comportamiento ejem 222
+
+function Mascota(nombre,especie,edad,peso){
+    this.nombre = nombre;
+    this.especie = especie;
+    this.edad = edad;
+    this.peso = peso;
+    this.presentarse = function(){
+    console.log(`mi nombre es ${nombre},soy un ${especie},de ${edad} años y peso ${peso}`);
+    };
+}
+
+const animal1 = new Mascota("yako","canino",5,26);
+const animal2 = new Mascota("mono","gato",32,16);
+const animal3 = new Mascota("pepe","loro",7,0.7);
+const animal4 = new Mascota("kira","canino",3,21);
+
+animal1.presentarse();
+animal2.presentarse();
+animal3.presentarse();
+animal4.presentarse();
