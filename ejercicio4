@@ -1,5 +1,5 @@
 // biblioteca libro eje 4
-
+console.log("Biblioteca: >>");
 function Libro(nombre,materia,ciudad,tamano,color,prestado){
     this.nombre = nombre;
     this.materia = materia;
@@ -7,12 +7,31 @@ function Libro(nombre,materia,ciudad,tamano,color,prestado){
     this.tamano = tamano;
     this.color = color;
     this.prestado = false;
-    this.mostrarResultado = ((this.ciudad + this.tamano + this.color) / 3 >= 3);
 
-    console.log(`Estudiante ${nombre}: ${materia} notas: ${ciudad} | ${tamano} | ${color} | aprobo :${this.mostrarResultado}`);
+    this.prestar = function(){
+        if (this.prestado == false){
+            this.prestado = true;
+            console.log("Libro prestado correctamente.")
+        }else{
+            console.log("libro ya esta prestado.")
+        }
+    };
+    this.devolver = function(){
+        if(this.prestado){
+            this.prestado = false;
+            console.log("Libro devuelto.");
+        }else{
+            console.log("error:no se presto.");
+        }
+    };
+        
+    console.log(`${nombre} de ${materia} de ${ciudad} es ${tamano}, de color ${color} y su estado de prestamo es: ${this.prestado}`);
 }
 
-const libro1= new Libro("rhonald","matematicas",5,3,4);
-const libro2 = new Libro("stevend","desarrollo",5,5,5);
-const libro3 = new Libro("dayana","derecho",0,0,0);
-const libro4 = new Libro("miguel","contabilidad",1,2,3);
+const libro1= new Libro("el libro 1","matematicas","bogota","grande","negro");
+const libro2 = new Libro("el libro 2","desarrollo","medellin","mediano","azul");
+const libro3 = new Libro("el libro 3","derecho","bogota","grande","cafe");
+const libro4 = new Libro("el libro 4","contabilidad","cali","pequeño","rojo");
+
+libro1.prestar();
+libro1.devolver();
